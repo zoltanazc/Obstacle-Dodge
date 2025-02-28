@@ -423,8 +423,10 @@ GameObject:
   - component: {fileID: 318567303}
   - component: {fileID: 318567302}
   - component: {fileID: 318567301}
+  - component: {fileID: 318567306}
   - component: {fileID: 318567300}
   - component: {fileID: 318567304}
+  - component: {fileID: 318567305}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -515,7 +517,7 @@ Transform:
   m_GameObject: {fileID: 318567299}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 2.9419, y: 5.572864, z: 4.0177}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -535,6 +537,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gotHitMat: {fileID: 2100000, guid: 5547197ba60a9a944a12eaa2cbce2c1f, type: 2}
   gotHitBoxC: {fileID: 318567300}
+--- !u!54 &318567305
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318567299}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
+--- !u!114 &318567306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318567299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e323bb363fbb80349ae1c7ec0ea95bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRb: {fileID: 0}
+  forwardForce: 100
+  sidewaysForce: 100
 --- !u!1 &326897584
 GameObject:
   m_ObjectHideFlags: 0
