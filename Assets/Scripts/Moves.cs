@@ -2,7 +2,6 @@ using UnityEngine;
 public class Moves : MonoBehaviour
 {
 
-    [SerializeField] float moveSpeed = 0f;
     public Rigidbody playerRb;
 
     public float forwardForce = 2000f;
