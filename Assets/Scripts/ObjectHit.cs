@@ -3,15 +3,18 @@ using UnityEngine;
 public class ObjectHit : MonoBehaviour
 {
     public Material gotHitMat;
-    public BoxCollider gotHitBoxC;
-    void OnCollisionEnter()
+    //public BoxCollider gotHitBC;
+    //public Rigidbody gotHitRB;
+    void OnCollisionEnter(Collision other)
     {
-        if(gameObject.tag != "Wall")
+        if(other.gameObject.tag == "Player" && gameObject.tag == "Obstacle")
         {
             GetComponent<MeshRenderer>().material = gotHitMat;
-            gotHitBoxC.enabled = false;
+            //gotHitBC.enabled = false;
+            //Destroy(gotHitRB);
+            gameObject.tag = "Hit";
+
+            
         }
-        
-        
     }
 }

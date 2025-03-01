@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class Scores : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    int hits = 0;
+    void OnCollisionEnter(Collision other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.tag != "Hit")
+        {
+            hits++;
+            Debug.Log("Objects you hit:" + hits);
+        }
     }
 }
