@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class  TriggerProjectile : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public GameObject projectile;
+    public GameObject projectile2;
+    public GameObject projectile3;
+    public GameObject projectile4;
+    public GameObject projectile5;
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if(other.gameObject.transform.tag == "Player")
+        {
+            projectile.SetActive(true);
+            projectile2.SetActive(true);
+            projectile3.SetActive(true);
+            projectile4.SetActive(true);
+            projectile5.SetActive(true);
+        }
     }
 }
