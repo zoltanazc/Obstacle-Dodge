@@ -13,6 +13,7 @@ public class ObjectHit : MonoBehaviour
             //gotHitBC.enabled = false;
             //Destroy(gotHitRB);
             gameObject.tag = "Hit";
+
             
         }
     }

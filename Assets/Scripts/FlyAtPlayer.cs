@@ -15,6 +15,20 @@ public class FlyAtPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MovetoPlayer();
+        if (transform.position == playerPos)
+        {
+            DestroyWhenReached();
+        }
+    }
+
+    void MovetoPlayer()
+    {
         transform.position = Vector3.MoveTowards(transform.position, playerPos, ballSp * Time.deltaTime);
+    }
+
+    void DestroyWhenReached()
+    {
+        Destroy(gameObject);
     }
 }
