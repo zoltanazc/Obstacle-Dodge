@@ -7,7 +7,7 @@ public class ObjectHit : MonoBehaviour
     //public Rigidbody gotHitRB;
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "Player" && gameObject.tag == "Obstacle")
+        if(other.gameObject.tag == "Player")
         {
             GetComponent<MeshRenderer>().material = gotHitMat;
             //gotHitBC.enabled = false;

@@ -6,6 +6,12 @@ public class FlyAtPlayer : MonoBehaviour
     Vector3 playerPos;
     public float ballSp = 0f;
 
+    //Awake happens before Start
+    void Awake()
+    {
+        gameObject.SetActive(false);
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
